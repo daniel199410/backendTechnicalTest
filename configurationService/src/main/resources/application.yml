@@ -1,0 +1,17 @@
+server:
+  port: 3332
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/daniel199410/BackendTechnicalTestConfig.git
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.co.dcatano: 'DEBUG'
