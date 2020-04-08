@@ -1,0 +1,9 @@
+# HTTP Server
+server:
+    port: 3333   # HTTP port
+
+logging:
+    file: logs/${spring.application.name}.log
+    level:
+        org.springframework.cloud: 'DEBUG'
+        co.com.dcatano: 'DEBUG'
