@@ -1,0 +1,9 @@
+spring:
+  config:
+    name: eureka-server
+  application:
+    name: eureka-server
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:3332
