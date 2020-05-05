@@ -9,3 +9,5 @@ CREATE TABLE IF NOT EXISTS backendtechnicaltest.PATIENT (
 )
 ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_spanish2_ci
 COMMENT = 'Table for patients info storage';
+
+ALTER TABLE `patient` ADD UNIQUE(`ID`);
