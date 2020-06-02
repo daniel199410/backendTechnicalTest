@@ -1,0 +1,25 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3.7'
+services:
+  config:
+    build:
+      context: configurationService
+      dockerfile: Dockerfile
+    ports:
+    - "3332:3332"
+    restart: always
+    networks:
+      - backend
+  eureka:
+    build:
+      context: eureka-server
+      dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+    restart: always
+    depends_on:
+      - config
+    networks:
+      - backend
+networks:
+  backend:
